@@ -9,8 +9,7 @@ This project demonstrates how to implement a microservice architecture using gRP
 
 ## 📁 Project Structure
 
-<pre> ```bash grpc-multi-server/ ├── server-a/ │ ├── proto/ │ │ └── email.proto # gRPC service definition │ ├── grpcClients/ │ │ └── emailClient.ts # gRPC client to call email service │ ├── controllers/ │ │ └── userController.ts # Example controller using gRPC client │ └── server.ts # Entry point for Server A ├── server-b/ │ ├── proto/ │ │ └── email.proto # Same proto file used in Server A │ └── emailService.ts # Implementation of EmailService └── package.json ``` </pre>
-
+<img width="404" alt="Screenshot 2025-06-08 at 12 31 42 PM" src="https://github.com/user-attachments/assets/4034ab76-0e1b-413a-ad09-89559b679317" />
 
 
 
