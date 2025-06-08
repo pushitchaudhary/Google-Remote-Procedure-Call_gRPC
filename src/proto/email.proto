@@ -1,0 +1,23 @@
+
+// Specifies the version of Protocol Buffers used
+syntax = "proto3"; 
+
+// Defines the package name for namespacing
+package email; 
+
+// Email service definition
+service Email {
+    // SendEmail is an RPC method that takes an EmailRequest and returns an EmailResponse
+    rpc SendEmail(EmailRequest) returns (EmailResponse);
+}
+
+// Request message containing name and email
+message EmailRequest {
+    string name = 1;  // The name of the sender
+    string email = 2; // The email address of the sender
+}
+
+// Response message containing the status of the email send operation
+message EmailResponse {
+    string status = 1; // Status message (e.g., "success", "failed")
+}
