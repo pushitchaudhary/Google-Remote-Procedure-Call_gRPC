@@ -2,6 +2,7 @@
 import * as grpc from '@grpc/grpc-js'
 import * as protoLoader from '@grpc/proto-loader'
 import path from 'path'
+import { sendEmailHandler } from './controller_server_2/emailController'
 
 
 const PORTO_PATH = path.resolve(__dirname, '../proto/email.proto')
@@ -14,13 +15,7 @@ const emailPackage = grpcObj.email;
 const server = new grpc.Server();
 
 server.addService(emailPackage.Email.service, {
-    SendEmail: (call :any, callback :any) =>{
-        const {email, name} = call.request;
-        console.log(`Server 2 - Sending email to ${email} with name ${name}`);
-        callback (null, {
-            status : 'Email sent successfully'
-        })
-    }
+    SendEmail: sendEmailHandler
 })
 
 

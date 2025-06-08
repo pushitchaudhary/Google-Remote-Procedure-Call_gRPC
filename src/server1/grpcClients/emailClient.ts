@@ -10,6 +10,7 @@ const grpcObj = grpc.loadPackageDefinition(packageDef) as any;
 const emailPackage = grpcObj.email
 
 
+
 const client = new emailPackage.Email(
     'localhost:50052',
     grpc.credentials.createInsecure()
